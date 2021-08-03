@@ -1,0 +1,70 @@
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <div class="title">
+    <p class="text-white">My Time Table</p>
+    </div>
+    <br>
+    <br>
+    <div class="text-white">
+    <div class="fes-list"><p>フェス一覧</p></div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <%= link_to 'ROCK IN JAPAN FESTIVAL', '#', class: 'btn btn-block btn-white' %>
+      </div>
+    <div class="col-md-4">
+      <%= link_to 'RISING SUN ROCK FESTIVAL', '#',class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'FUJI ROCK FESTIVAL', '#',class: 'btn btn-block btn-white' %>
+    </div>
+    </div>
+    
+   <div class="row">
+    <div class="col-md-4">
+      <%= link_to 'SUMMER SONIC', '#',class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'COUNTDOWN JAPAN', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'RADIO CRAZY', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-4">
+      <%= link_to 'VIVA LA ROCK', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'JAPAN JAM', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'METROPOLITAN ROCK FESTIVAL', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    </div>
+    
+    <br>
+    <br>
+    
+    <div class="title-mytimetable">
+      <h1 class="text-brack">My Time Table</h1>
+      <h2 class="text-brack">自分だけのタイムテーブルを作ろう！！</h2>
+    </div>
+    
+    <div class="input-mytimetable">
+    <form action="/sample" method="post">
+      <table>
+        <tr>
+          <div class="time-title">
+          <label>時間</label><br>
+          <th><input type="time" name="smp01" class="time" value="10:00" size=40 style="font-size:40px;" min="13:00" max="17:30" step="900"></th>
+          </div>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+

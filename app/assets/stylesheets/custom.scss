@@ -1,0 +1,291 @@
+/*トップページ*/
+
+h1, h2 {
+    font-weight: 100;
+  }
+  
+  .title {
+    font-size: 80px;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  .text-brack {
+    color: #000	;
+  }
+  
+  .fes-list {
+    font-size: 50px;
+  }
+  
+  
+  
+  .btn-white {
+    color: #fff;
+    border: 1px solid #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.0);
+  
+    &:hover {
+      color: #fff;
+    }
+  }
+  
+  .top-hero-wrapper {
+    width: 100vw;
+    background-image: image-url('');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  }
+  
+  .top-hero-container {
+    padding-top: 220px;
+    h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+  
+  .row {
+    margin: 40px;
+  }
+  
+  
+  
+  
+  .title-mytimetable {
+     margin-left:auto;           /* IE以外用の中央寄せ */
+     margin-right:auto;          /* IE以外用の中央寄せ */
+    
+     width:700px;                /* 幅 */
+     height:200px;               /* 高さ */
+     border:solid 3px #FFFFFF;   /* 枠線 */
+     background-color:#FFFFFF;   /* 背景色 */
+     color:#ffffff;              /* 文字色 */
+  }
+  
+  
+  .input-mytimetable {
+      
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: #6091d3;/*文字色*/
+      background: #FFF;
+      border: solid 3px #6091d3;/*線*/
+      border-radius: 10px;/*角の丸み*/
+  }
+  
+  .input-mytimetable p {
+      margin: 0; 
+      padding: 0;
+  }
+  
+  .Time-title {
+    font-size: 80px;
+  }
+  
+  .time-title {
+      width: 200px;
+      height: 110px;
+  }
+
+  .Artist-title {
+    font-size: 80px;
+  }
+  
+ .artist-title {
+     width: 300px;
+ }
+
+ .Stage-title {
+    font-size: 80px;
+  }
+  
+ .stage-title {
+     width: 300px;
+ }
+
+
+/*ヘッダー*/
+
+.header {
+    text-align: right;
+}
+
+.header-btn {
+    
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+
+
+
+
+
+  /*ここからfestival/show*/
+
+  .festival-index-wrapper {
+    text-align: center;
+  }
+
+  .text-festival {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 50px;
+    color: #e43e3e;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #e43e3e;/*上線*/
+    border-bottom: solid 3px #e43e3e;/*下線*/
+  }
+
+  .festival-image img {
+    width: 1000px;  
+  }
+
+  .festival-toha {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 50px;
+    color: #3f6af7;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #3f6af7;/*上線*/
+    border-bottom: solid 3px #3f6af7;/*下線*/
+  }
+  
+
+.festival-overview {
+    width: 50%;
+
+
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #62c1ce;
+}
+
+.festival-overview .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #62c1ce;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.festival-place {
+    width: 50%;
+
+
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #62c1ce;
+}
+
+.festival-place .box-place {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #62c1ce;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.festival-feature {
+    width: 50%;
+
+
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #62c1ce;
+}
+
+.festival-feature .box-feature {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #62c1ce;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+.festival-comment-title {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 50px;
+    color: #000;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #000;/*上線*/
+    border-bottom: solid 3px #000;/*下線*/
+}
+
+
+/*ここからユーザー作成画面*/
+
+.form-control {
+    height: 45px;
+  }
+  
+  .users-new-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: image-url('bg-top.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  
+    .users-new-container {
+      padding-top: 220px;
+  
+      .form-group {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .alert {
+    margin-bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+  }

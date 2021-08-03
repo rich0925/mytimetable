@@ -1,0 +1,111 @@
+<p>festivalのページです</p>
+
+
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <div class="title">
+    <p class="text-white">My Time Table</p>
+    </div>
+    <br>
+    <br>
+    <div class="text-white">
+    <div class="fes-list"><p>フェス一覧</p></div>
+    </div>
+    
+    <% @festivals.each do |festival| %>
+        <%= link_to festival.name , festivals_show_path(id: festival.id, name: festival.name) , class: 'btn btn-block btn-white' %>
+    <% end %>
+    
+    <div class="text-white"><p>ここから下のボタンは飾り</p></div>
+    
+   <div class="row">
+    <div class="col-md-4">
+      <%= link_to 'SUMMER SONIC', '#',class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'COUNTDOWN JAPAN', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'RADIO CRAZY', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-4">
+      <%= link_to 'VIVA LA ROCK', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'JAPAN JAM', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to 'METROPOLITAN ROCK FESTIVAL', '#', class: 'btn btn-block btn-white' %>
+    </div>
+    </div>
+    
+    <br>
+    <br>
+    
+    <div class="title-mytimetable">
+      <h1 class="text-brack">My Time Table</h1>
+      <h2 class="text-brack">自分だけのタイムテーブルを作ろう！！</h2>
+    </div>
+
+    <div class="Artist-Select">
+    <label for="Artist">選択してください</label>
+    <select id="festivals">
+      <option value="rock in japan festival">ROCK IN JAPAN FESTIVAL</option>
+      <option value="rising sun rock festival">RISING SUN ROCK FESTIVAL</option>
+      <option value="fuji rock festival">FUJI ROCK FESTIVAL</option>
+      <option value="summer sonic">SUMMER SONIC</option>
+      <option value="countdown japan">COUNTDOWN JAPAN</option>
+      <option value="radio crazy">RADIO CRAZY</option>
+      <option value="viva la rock">VIVA LA ROCK</option>
+      <option value="japan jam">JAPAN JAM</option>
+      <option value="metropolitan rock festival">METROPOLITAN ROCK FESTIVAL</option>
+    </select>
+    
+    
+
+    
+    </div>
+
+    <script>
+      let selector = document.querySelector('#festivals');
+      selector.addEventListener('change', (event) => {
+      let box = document.querySelector('#box');
+      box.textContent = event.target.value;
+    });
+    </script>
+    
+    <div class="input-mytimetable">
+    
+    <div id="box"></div>
+
+    <div class="row">
+    <form action="/sample" method="post">
+    <div class="col-md-4">
+      <table>
+        <tr>
+          <div class="Time-title">
+          <label>time</label><br>
+          <th><input type="time" name="smp01" class="time-title" value="10:00" size=40 style="font-size:40px;" min="13:00" max="17:30" step="900"></th>
+          </div>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <div class="Artist-title">
+        <p>Artist<br>
+        <input type="text" name="name" class="artist-title"></p>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="Stage-title">
+        <p>Stage<br>
+        <input type="text" name="name" class="stage-title"></p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>

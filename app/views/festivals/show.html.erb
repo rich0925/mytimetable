@@ -1,0 +1,54 @@
+<div class="header">
+    <%= link_to 'Sign up', new_user_path, class: 'header-btn' %>
+    <%= link_to 'Log in', login_path,class: 'header-btn' %>
+</div>
+
+<div class="festival-index-wrapper">
+<br>
+    <div class="festival-title">
+        <p class="text-brack text-festival"><%= @festival.name %></p>
+    </div>
+    <br>
+
+    <div class="festival-image">
+        <img src="/assets/<%= @festival.name %>.jpg" alt="">
+    </div>
+    <br>
+    <div class="festival-toha">
+        <p><%= @festival.name %>とは？</p>
+    </div>
+    <br>
+    <div class="festival-overview">
+        <span class="box-title">概要</span>
+        <p>ROCK IN JAPAN FESTIVALは...</p>
+    </div>
+    
+    <div class="festival-place">
+        <span class="box-place">場所</span>
+        <p>ROCK IN JAPAN FESTIVALの場所は...</p>
+    </div>
+    
+    <div class="festival-feature">
+        <span class="box-feature">特徴</span>
+        <p>ROCK IN JAPAN FESTIVALの特徴は...</p>
+    </div>
+
+    <div class="festival-comment-title">
+        <p>コメント</p>
+    </div>
+    <%= form_for @comment do |f| %>
+    <div class="festival-comment">
+        <%= f.hidden_field :festival_id, value: @festival.id %>
+        <%= f.text_field :comment %>
+        <%= f.submit "送信" %>
+    </div>
+    <% end %>
+        
+    
+
+</div>
+
+       
+
+    
+
