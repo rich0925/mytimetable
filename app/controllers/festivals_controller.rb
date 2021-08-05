@@ -5,11 +5,13 @@ class FestivalsController < ApplicationController
 
   def show
     @festival = Festival.find(params[:id])
+    @festivals = Festival.all
     @comment = Comment.new
-    @comments = Comment.all
+    
   end
   
   def create
+    
     @comment = current_user.comments.new(comment_params)
     
     if @comment.save

@@ -1,6 +1,7 @@
 <p>festivalのページです</p>
 
 
+
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
     <div class="title">
@@ -13,7 +14,7 @@
     </div>
     
     <% @festivals.each do |festival| %>
-        <%= link_to festival.name , festivals_show_path(id: festival.id, name: festival.name) , class: 'btn btn-block btn-white' %>
+        <%= link_to festival.name , festivals_show_path(id: festival.id) , class: 'btn btn-block btn-white' %>
     <% end %>
     
     <div class="text-white"><p>ここから下のボタンは飾り</p></div>

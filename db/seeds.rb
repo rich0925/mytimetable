@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Festival.create!(
+   [
+     {
+       name: 'ROCK IN JAPAN FESTIVAL',
+     },
+     {
+       name: 'FUJI ROCK FESTIVAL',
+     },
+     {
+       name: 'RISING SUN ROCK FESTIVAL'
+     }
+   ]
+)

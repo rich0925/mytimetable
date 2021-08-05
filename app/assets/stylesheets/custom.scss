@@ -1,3 +1,23 @@
+/*ヘッダー*/
+
+.header-top-title {
+  font-size: 20px;
+  padding: 0px;
+  margin-top: 15px;
+}
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  width: 100%;
+  padding: 30px 4% 10px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+
+
+}
+
 /*トップページ*/
 
 h1, h2 {
@@ -173,75 +193,69 @@ h1, h2 {
 
 .festival-overview {
     width: 50%;
-
-
     position: relative;
-    margin: 2em 0;
+    margin: 2em auto;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
 }
 
 .festival-overview .box-title {
     position: absolute;
     display: inline-block;
-    top: -27px;
-    left: -3px;
+    top: -13px;
+    left: 10px;
     padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #62c1ce;
-    color: #ffffff;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
 
 .festival-place {
     width: 50%;
-
-
     position: relative;
-    margin: 2em 0;
+    margin: 2em auto;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
 }
 
 .festival-place .box-place {
     position: absolute;
     display: inline-block;
-    top: -27px;
-    left: -3px;
+    top: -13px;
+    left: 10px;
     padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #62c1ce;
-    color: #ffffff;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
 
 .festival-feature {
     width: 50%;
-
-
     position: relative;
-    margin: 2em 0;
+    margin: 2em auto;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
 }
 
 .festival-feature .box-feature {
     position: absolute;
     display: inline-block;
-    top: -27px;
-    left: -3px;
+    top: -13px;
+    left: 10px;
     padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #62c1ce;
-    color: #ffffff;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
@@ -255,6 +269,20 @@ h1, h2 {
     padding: 0.5em 0;/*上下の余白*/
     border-top: solid 3px #000;/*上線*/
     border-bottom: solid 3px #000;/*下線*/
+}
+
+/*festival/showのコメント*/
+
+.festival-comment-list {
+  width: 400px;
+  
+　text-align:center;
+  padding: 0.5em 1em;
+  margin: 2em auto;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+  border-left: double 7px #000;/*左線*/
+  border-right: double 7px #000;/*右線*/
 }
 
 

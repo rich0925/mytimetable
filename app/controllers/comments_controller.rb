@@ -3,6 +3,8 @@ class CommentsController < ApplicationController
   end
   
   def show
+    
+    @festivals = Festival.all
     @comment = Comment.new
     @comments = Comment.all
   end
@@ -11,10 +13,11 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.new(comment_params)
     
     if @comment.save
-      redirect_to comments_path, success: '投稿に成功しました'
+      redirect_to festivals_show_path(id: @comment.festival.id, anchor: 'comment-keep')
+      '投稿に成功しました'
     else
       flash.now[:danger] = "投稿に失敗しました"
-      render :new
+      redirect_to festivals_show_path(id: @comment.festival.id, anchor: 'comment-keep')
     end
   end
   

@@ -1,8 +1,3 @@
-<div class="header">
-    <%= link_to 'Sign up', new_user_path, class: 'header-btn' %>
-    <%= link_to 'Log in', login_path,class: 'header-btn' %>
-</div>
-
 <div class="festival-index-wrapper">
 <br>
     <div class="festival-title">
@@ -20,22 +15,37 @@
     <br>
     <div class="festival-overview">
         <span class="box-title">概要</span>
-        <p>ROCK IN JAPAN FESTIVALは...</p>
+        <p>データベースに追加...</p>
     </div>
     
     <div class="festival-place">
         <span class="box-place">場所</span>
-        <p>ROCK IN JAPAN FESTIVALの場所は...</p>
+        <p>データベースに追加...</p>
     </div>
     
     <div class="festival-feature">
         <span class="box-feature">特徴</span>
-        <p>ROCK IN JAPAN FESTIVALの特徴は...</p>
+        <p>データベースに追加...</p>
     </div>
 
     <div class="festival-comment-title">
         <p>コメント</p>
     </div>
+    
+    <div class="festival-comment-list" id="comment-keep">
+        <% @festival.comments.each do |comment| %>
+            <p><%= comment.user.name %> ： <%=  comment.comment %></p>
+        <% end %>
+    </div>
+    
+    <br>
+    
+    <p>フェス名：「<%= @festival.name %>」</p>
+    <% if current_user %>
+        <p>ユーザー名：「<%= current_user.name %>」</p>
+    <% else %>
+        <p>ユーザー名：「ゲストユーザー」</p>
+    <% end %>
     <%= form_for @comment do |f| %>
     <div class="festival-comment">
         <%= f.hidden_field :festival_id, value: @festival.id %>
@@ -43,8 +53,10 @@
         <%= f.submit "送信" %>
     </div>
     <% end %>
-        
     
+    <script>
+
+    </script>
 
 </div>
 
