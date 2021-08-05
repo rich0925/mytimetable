@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
       redirect_to festivals_show_path(id: @comment.festival.id, anchor: 'comment-keep')
       '投稿に成功しました'
     else
-      flash.now[:danger] = "投稿に失敗しました"
+      "投稿に失敗しました"
       redirect_to festivals_show_path(id: @comment.festival.id, anchor: 'comment-keep')
     end
   end

@@ -1,5 +1,4 @@
 <div class="festival-index-wrapper">
-<br>
     <div class="festival-title">
         <p class="text-brack text-festival"><%= @festival.name %></p>
     </div>
@@ -40,18 +39,26 @@
     
     <br>
     
-    <p>フェス名：「<%= @festival.name %>」</p>
+    <div class="festivalname-and-username">
+        <p>フェス名：「<%= @festival.name %>」</p>
+        <% if current_user %>
+            <p>ユーザー名：「<%= current_user.name %>」</p>
+        <% else %>
+            <p>ユーザー名：「ゲストユーザー」</p>
+        <% end %>
+    </div>
+    
     <% if current_user %>
-        <p>ユーザー名：「<%= current_user.name %>」</p>
-    <% else %>
-        <p>ユーザー名：「ゲストユーザー」</p>
-    <% end %>
     <%= form_for @comment do |f| %>
     <div class="festival-comment">
         <%= f.hidden_field :festival_id, value: @festival.id %>
         <%= f.text_field :comment %>
         <%= f.submit "送信" %>
     </div>
+    <% end %>
+    <% else %>
+        <br>
+        <p>※コメントするにはログインしてください。</p>
     <% end %>
     
     <script>
