@@ -1,16 +1,23 @@
 /*ヘッダー*/
 
 .header-top-title {
-  font-size: 20px;
+  font-size: 40px;
   padding: 0px;
-  margin-top: 50px;
+  margin: 30px;
 }
 
-ul {
-  padding: 10px;
-  margin: 10px;
-  color: #FFF
-  position: absolute; top: 0; 
+.header-user-operation {
+  padding: 0px;
+  margin: 30px;
+  color: #FFF;
+  font-size: 30px;
+}
+
+.header-user-name {
+  padding-right: 10px;
+  margin: 4px;
+  float: left;
+  
 }
 
 .navbar-transparent {
@@ -21,10 +28,11 @@ ul {
   a {
     color: #fff !important;
   }
-
-
 }
 
+
+  
+  
 /*トップページ*/
 
 h1, h2 {

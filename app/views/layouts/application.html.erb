@@ -17,16 +17,19 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
         <%= link_to root_path do %>
-          <p class="header-top-title">my time table</p>
+          <p class="header-top-title navbar-left">my time table</p>
         <% end %>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="header-user-operation nav navbar-nav navbar-right">
               <% if logged_in? %>
+                <div class="header-user-name">
+                  <p>「<%= current_user.name %>」がログイン中</p>
+                </div>
                 <li>
                   <%= link_to logout_path, method: :delete do %>
                     <p>log out</p>
                   <% end %>
                 </li>
-                <%= current_user.name %>
+                
               <% else %>
                 <li>
                   <%= link_to new_user_path do %>
