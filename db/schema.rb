@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_05_065110) do
+ActiveRecord::Schema.define(version: 2021_08_16_052456) do
+
+  create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "gyou_id"
+    t.string "yomi"
+    t.string "name"
+    t.string "artistimage"
+    t.string "artistdetail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -28,6 +38,12 @@ ActiveRecord::Schema.define(version: 2021_08_05_065110) do
     t.string "place"
     t.string "feature"
     t.string "comment"
+  end
+
+  create_table "gyous", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "gyou"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

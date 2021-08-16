@@ -1,6 +1,12 @@
 class FestivalsController < ApplicationController
   def index
     @festivals = Festival.all
+    
+    if !params[:artist_id].nil?
+      @artist = Artist.find(params[:artist_id])
+    else
+      @artist = nil
+    end
   end
 
   def show

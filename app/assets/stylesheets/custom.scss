@@ -296,6 +296,10 @@ h1, h2 {
   border-right: double 7px #000;/*右線*/
 }
 
+.comment-left {
+  text-align: left;
+}
+
 .festivalname-and-username {
   padding: 1em;
   font-size: 20px;
@@ -339,5 +343,11 @@ h1, h2 {
   /* コメント編集 */
   
   .comment-edit-title {
+    padding-top: 220px;
+  }
+  
+  /* artist/index */
+  
+  .artist-title {
     padding-top: 220px;
   }

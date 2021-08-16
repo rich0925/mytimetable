@@ -1,0 +1,10 @@
+<div class="artist-title">
+  <h1>Artists#index</h1>
+</div>
+
+<div class="artist-list-top">
+  <p>あ行</p>
+  <% Gyou.agyou.artists.each do |artist| %>
+  <p><%= link_to artist.name,festivals_path(artist_id: artist.id) %></p>
+  <% end %>
+</div>

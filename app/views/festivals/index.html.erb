@@ -14,7 +14,7 @@
     </div>
     
     <% @festivals.each do |festival| %>
-        <%= link_to festival.name , festivals_show_path(id: festival.id) , class: 'btn btn-block btn-white' %>
+        <%= link_to festival.name , festival_path(festival.id) , class: 'btn btn-block btn-white' %>
     <% end %>
     
 
@@ -73,7 +73,10 @@
     <div class="col-md-4">
       <div class="Artist-title">
         <p>Artist<br>
-        <input type="text" name="name" class="artist-title"></p>
+        <% if !@artist.nil? %>
+          <p><%= @artist.name %></p>
+        <% end %>
+         <%= link_to 'アーティスト', artists_index_path %></p>
       </div>
     </div>
      <div class="col-md-4">
@@ -82,6 +85,8 @@
         <input type="text" name="name" class="stage-title"></p>
       </div>
     </div>
+    
+    
 
     </div>
   </div>

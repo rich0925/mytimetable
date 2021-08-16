@@ -33,6 +33,7 @@
     
     <div class="festival-comment-list" id="comment-keep">
         <% @festival.comments.each do |comment| %>
+            <div class="comment-left">
             <p><%= comment.user.name %> ： <%=  comment.comment %>　
                 <% if current_user == comment.user %>
                     <%= link_to "削除", comment_path(comment.id), method: :delete %>
@@ -40,6 +41,7 @@
                     
                 <% end %>
             </p>
+            </div>
                 
         <% end %>
     </div>
