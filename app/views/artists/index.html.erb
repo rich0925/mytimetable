@@ -8,3 +8,10 @@
   <p><%= link_to artist.name,festivals_path(artist_id: artist.id) %></p>
   <% end %>
 </div>
+
+<div class="artist-list-top">
+  <p>か行</p>
+  <% Gyou.kagyou.artists.each do |artist| %>
+  <p><%= link_to artist.name,festivals_path(artist_id: artist.id) %></p>
+  <% end %>
+</div>

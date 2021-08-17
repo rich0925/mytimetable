@@ -86,6 +86,34 @@
       </div>
     </div>
     
+    <div class="row">
+    <form action="/sample" method="post">
+    <div class="col-md-4">
+      <table>
+        <tr>
+          <div class="Time-title">
+          <label>time</label><br>
+          <th><input type="time" name="smp01" class="time-title" value="10:00" size=40 style="font-size:40px;" min="13:00" max="17:30" step="900"></th>
+          </div>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <div class="Artist-title">
+        <p>Artist<br>
+        <% if !@artist.nil? %>
+          <p><%= @artist.name %></p>
+        <% end %>
+         <%= link_to 'アーティスト', artists_index_path %></p>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="Stage-title">
+        <p>Stage<br>
+        <input type="text" name="name" class="stage-title"></p>
+      </div>
+    </div>
+    
     
 
     </div>
