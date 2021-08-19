@@ -1,0 +1,16 @@
+<div class="festival_select-index-wrapper">
+  <div class="title">
+    <h1>festival_select.html.erb</h1>
+  </div>
+  
+    <p>フェスを選択</p>
+
+  <div class="festival-select-list">
+    <% @festivals.each do |festival| %>
+        <%= link_to festival.name , mytimetables_show_path(festival.id) , class: 'btn btn--orange' %>
+    <% end %>
+  </div>
+  
+
+    
+</div>

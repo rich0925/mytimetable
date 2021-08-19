@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  
+  get 'mytimetables/show/:id',   to: 'mytimetables#show', as: 'mytimetables_show'
+  get 'festival_selects/index'
   get 'artists/index'
   get 'sessions/new'
   

@@ -41,6 +41,7 @@ h1, h2 {
   
   .title {
     font-size: 80px;
+    padding-top: 220px;
   }
   
   .text-white {
@@ -81,7 +82,6 @@ h1, h2 {
   }
   
   .top-hero-container {
-    padding-top: 220px;
     h1 {
       font-size: 56px;
       margin-bottom: 20px;
@@ -131,9 +131,13 @@ h1, h2 {
     font-size: 80px;
   }
   
+  .Time-select {
+    padding-left: 100px;
+  }
+  
   .time-title {
-      width: 200px;
-      height: 110px;
+    width: 200px;
+    height: 110px;
   }
 
   .Artist-title {
@@ -179,10 +183,6 @@ h1, h2 {
     
     text-align: center;
     background-color: #464646;
-  }
-  
-  .festival-title {
-    padding-top: 220px;
   }
   
   .text-festival {
@@ -351,3 +351,32 @@ h1, h2 {
   .artist-title {
     padding-top: 220px;
   }
+  
+  /* festival_selects/index */
+  
+  .festival_select-index-wrapper {
+    text-align: center;
+    background-color: #464646;
+  }
+  
+  .festival-select-list {
+    padding: 20px;
+  }
+  
+  .btn--orange,
+  a.btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+  }
+  .btn--orange:hover,
+  a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+/* mytimetable/show */
+
+.mytimetable-show-wrapper {
+  text-align: center;
+  background-color: #464646;
+}
