@@ -69,10 +69,26 @@
         <br>
         <p>※コメントするにはログインしてください。</p>
     <% end %>
-    
-    <script>
 
-    </script>
+    <div class="mytimetable-create-title">
+        <p>タイムテーブル作成</p>
+    </div>
+    
+    <div class="mytimetable-create">
+        <table border="1">
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <% @festival.stages.each do |stage| %>
+                <td><%= stage.name %></td>
+                <% end %>
+            </tr>
+            <% @festival.festival_times.each do |festival_time| %>
+            <tr><td><%= festival_time.name %></td></tr>
+            <% end %>
+        </table>
+        <br>
+    </div>
+
 
 </div>
 

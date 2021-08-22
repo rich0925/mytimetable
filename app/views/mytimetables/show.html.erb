@@ -3,21 +3,21 @@
     <h1><%= @festival.name %></h1>
   </div>
   
-  <%= form_with model: @festival do |f| %>
+  <%= form_with model: @mytimetable do |f| %>
   <div class="container">
     <div class="row">
       <div class="col-md-4">
         <%= time_select("article", "sunrise") %>
       </div>
       <div class="col-md-4">
-        <%= f.select :faculty, [@artists], include_blank: "選択して下さい" %>
+        <%= f.label :Artist %>
+        <%= f.collection_select :id, Artist.all, :id, :name, include_blank: "選択して下さい" %>
       </div>
       <div class="col-md-4">
-          <%= form_for @festival do |f| %>
           <%= f.label :stage %>
-          <%= f.collection_select :id, Festival.all, :id, :name %>
-          <% end %>
-    </div>
+          <%= f.collection_select :id, Stage.all, :id, :name, include_blank: "選択して下さい" %>
+      </div>
   </div>
   <% end %>
+</div>
 </div>
