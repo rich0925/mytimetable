@@ -6,6 +6,14 @@ if Stage.all.count > 0
   Stage.delete_all
 end
 
+if FestivalTime.all.count > 0
+  FestivalTime.delete_all
+end
+
+if Artist.all.count > 0
+  Artist.delete_all
+end
+
 Festival.create!([
   { id: 1, name: 'ROCK IN JAPAN FESTIVAL' },
   { id: 2, name: 'FUJI ROCK FESTIVAL' },
@@ -30,17 +38,21 @@ Stage.create!([
   { id: 7, festival_id: 1, name: 'HILLSIDE STAGE' },
 ])
 
+t = Time.parse("202108220900")
+for i in 0..44 do
 FestivalTime.create!([
-  { id: 1, festival_id: 1, name: '9:00' },
-  { id: 2, festival_id: 1, name: '10:00' },
-  { id: 3, festival_id: 1, name: '11:00' },
-  { id: 4, festival_id: 1, name: '12:00' },
-  { id: 5, festival_id: 1, name: '13:00' },
-  { id: 6, festival_id: 1, name: '14:00' },
-  { id: 7, festival_id: 1, name: '15:00' },
-  { id: 8, festival_id: 1, name: '16:00' },
-  { id: 9, festival_id: 1, name: '17:00' },
-  { id: 10, festival_id: 1, name: '18:00' },
-  { id: 11, festival_id: 1, name: '19:00' },
-  { id: 12, festival_id: 1, name: '20:00' },
+  festival_id: 1,
+  name: t.strftime("%H:%M")
+])
+t = t + 15.minutes
+end
+
+Artist.create!([
+  { festival_id: 1, stage_id: 1, festival_time_id: 7, name: 'yuzu' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 12, name: 'golden bomber' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 17, name: 'frederik' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 22, name: 'sumika' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 27, name: 'yabaT' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 32, name: 'THE ORAL CIGARETTES' },
+  { festival_id: 1, stage_id: 1, festival_time_id: 37, name: 'SEKAI NO OWARI' },
 ])

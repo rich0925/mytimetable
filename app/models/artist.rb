@@ -1,6 +1,6 @@
 class Artist < ApplicationRecord
-  belongs_to :gyou
-  belongs_to :festival
-  belongs_to :stage
-  belongs_to :festival_time
+  
+  belongs_to :festival, optional: true
+  belongs_to :stage, optional: true
+  belongs_to :festival_time, optional: true
 end

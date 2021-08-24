@@ -82,9 +82,18 @@
                 <td><%= stage.name %></td>
                 <% end %>
             </tr>
-            <% @festival.festival_times.each do |festival_time| %>
+                <% @festival.festival_times.each do |festival_time| %>
             <tr><td><%= festival_time.name %></td></tr>
-            <% end %>
+                <% end %>
+            <tr>
+                <% @festival.artists.each do |festival_time| %>
+                <% @stage.artists.each do |festival_time| %>
+                <% @festival_time.artists.each do |festival_time| %>
+                <tb><%= artist.name %></tb>
+                <% end %>
+                <% end %>
+                <% end %>
+            </tr>
         </table>
         <br>
     </div>
