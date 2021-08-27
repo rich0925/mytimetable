@@ -74,30 +74,13 @@
         <p>タイムテーブル作成</p>
     </div>
     
-    <div class="mytimetable-create">
-        <table border="1">
-            <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <% @festival.stages.each do |stage| %>
-                <td><%= stage.name %></td>
-                <% end %>
-            </tr>
-                <% @festival.festival_times.each do |festival_time| %>
-            <tr><td><%= festival_time.name %></td></tr>
-                <% end %>
-            <tr>
-                <% @festival.artists.each do |festival_time| %>
-                <% @stage.artists.each do |festival_time| %>
-                <% @festival_time.artists.each do |festival_time| %>
-                <tb><%= artist.name %></tb>
-                <% end %>
-                <% end %>
-                <% end %>
-            </tr>
-        </table>
-        <br>
-    </div>
-
+    <p>日付</p>
+    
+        <% for period in 1..@festival.period do %>
+        <%= link_to period ,mytimetables_show_path(@festival.id, period)  , class: 'btn btn-block btn-white' %>
+        <% end %>
+    
+    
 
 </div>
 

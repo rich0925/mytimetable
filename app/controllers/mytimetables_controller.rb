@@ -1,9 +1,9 @@
 class MytimetablesController < ApplicationController
   def show
     @festival = Festival.find(params[:id])
-    @festivals = Festival.all
-    @Stages = Stage.all
+    @Stages = Stage.where(festival_id: @festival.id)
     
-    @artists = Artist.all
+    
+    
   end
 end

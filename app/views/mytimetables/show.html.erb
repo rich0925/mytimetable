@@ -2,22 +2,113 @@
   <div class="title">
     <h1><%= @festival.name %></h1>
   </div>
+  <p>period_id日目</p>
   
-  <%= form_with model: @mytimetable do |f| %>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <%= time_select("article", "sunrise") %>
-      </div>
-      <div class="col-md-4">
-        <%= f.label :Artist %>
-        <%= f.collection_select :id, Artist.all, :id, :name, include_blank: "選択して下さい" %>
-      </div>
-      <div class="col-md-4">
-          <%= f.label :stage %>
-          <%= f.collection_select :id, Stage.all, :id, :name, include_blank: "選択して下さい" %>
-      </div>
-  </div>
+<div class="mytimetable-create">
+  <table border="1">
+    <tr>
+      <% @festival.stages.each do |stage| %>
+        <th><%= stage.name %></th>
+      <% end %>  
+    </tr>   
+      <% @festival.stages.each do |stage| %>
+        <% stage.artists.each do |artist| %>
+          <tr><td><%= artist.name %></td></tr>
+        <% end %>
+        <% end %>
+    </tr>    
+  </table>
+      
+</div>
+
+<% @festival.stages.each do |stage| %>
+<table border="1">
+    <tr>
+        <th><%= stage.name %></th>
+      
+    </tr>   
+      
+        <% stage.artists.each do |artist| %>
+          <tr><td><%= artist.name %></td></tr>
+        <% end %>
+      
+  </table>
+  
+  <% end %>  
+
+
+<% @festival.stages.each do |stage| %>
+  <h1><%= stage.name %></h1>
+  
+  <% stage.artists.each do |artist| %>
+  <% if !artist.starttime.nil? %>
+    <p class="artist-name"><%= artist.name %>：<%= artist.starttime.strftime("%H:%M") %>～<%= artist.endtime.strftime("%H:%M") %></p>
+  <% else %>
+    <p class="artist-name"><%= artist.name %></p>
   <% end %>
-</div>
-</div>
+  <% end %>
+<% end %>
+
+
+
+<h1><<<<<<<<<<<<<<<ここから下がjavascript>>>>>>>>>>>>>>>>>>>>>></h1>
+
+<% @festival.stages.each do |stage| %>
+  <h1><%= stage.name %></h1>
+<form id="jquery-smaple-form">
+  <% stage.artists.each do |artist| %>
+    <p>
+        <label>
+            <input type="checkbox" name="jquery-smaple-checkbox" checked="checked" />
+            <% if !artist.starttime.nil? %>
+                <%= artist.name %>：<%= artist.starttime.strftime("%H:%M") %>～<%= artist.endtime.strftime("%H:%M") %>
+              <% else %>
+              
+                <%= artist.name %>
+              <% end %>
+            <% end %>
+        </label>
+    </p>
+</form>
+<% end %>
+
+<script type="text/javascript">
+<!--
+jQuery( function() {
+    jQuery( '#jquery-smaple-form input[name=jquery-smaple-checkbox]' ) . change(
+        function () {
+            jQuery( '#jquery-smaple-form input' ) . closest( 'label' ) . css( {
+                backgroundColor: 'yellow',
+                
+            } );
+            jQuery( '#jquery-smaple-form :checked' ) . closest( 'label' ) . css( {
+                backgroundColor: 'pink',
+                
+            } );
+        }
+    ) . change();
+} );
+// -->
+</script>
+
+<style>
+<!--
+#jquery-smaple-form {
+    padding: 10px 5px;
+}
+#jquery-smaple-form input {
+    margin: 5px 5px 15px 5px;
+    cursor: pointer;
+}
+#jquery-smaple-form label {
+    margin: 5px;
+    padding: 5px 10px;
+    
+    border-radius: 10px;
+    
+    font-size: 15px;
+    color: #303030;
+    cursor: pointer;
+}
+-->
+</style>
