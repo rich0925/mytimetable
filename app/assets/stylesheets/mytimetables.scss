@@ -1,3 +1,23 @@
-// Place all the styles related to the mytimetables controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#jquery-smaple-form {
+  padding: 10px 5px;
+}
+#jquery-smaple-form input {
+  margin: 5px 5px 15px 5px;
+  cursor: pointer;
+}
+#jquery-smaple-form label {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #303030;
+  cursor: pointer;
+}
+
+#timetable .timetable-list {
+  cursor: pointer;
+  transition: background 0.2s ease-in-out 0.1s;
+  &--selected {
+    background: #ffffff;
+  }
+}
