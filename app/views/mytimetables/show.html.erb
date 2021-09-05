@@ -5,36 +5,34 @@
   <p>period_id日目</p>
   
 <div class="mytimetable-create">
-  <table border="1">
+  <table id="timetable" border="1">
     <tr>
       <% @festival.stages.each do |stage| %>
         <th><%= stage.name %></th>
       <% end %>  
-    </tr>   
-      <% @festival.stages.each do |stage| %>
-        <% stage.artists.each do |artist| %>
-          <tr><td><%= artist.name %></td></tr>
-        <% end %>
-        <% end %>
-    </tr>    
+    </tr>
+    <% @festival.stages.each do |stage| %>
+      <% stage.artists.each do |artist| %>
+        <tr class="timetable-list">
+          <td><%= artist.name %></td>
+        </tr>
+      <% end %>
+    <% end %>
   </table>
-      
 </div>
 
 <% @festival.stages.each do |stage| %>
-<table border="1">
+  <table border="1">
     <tr>
-        <th><%= stage.name %></th>
-      
-    </tr>   
-      
-        <% stage.artists.each do |artist| %>
-          <tr><td><%= artist.name %></td></tr>
-        <% end %>
-      
+      <th><%= stage.name %></th>
+    </tr>
+    <% stage.artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+      </tr>
+    <% end %>
   </table>
-  
-  <% end %>  
+<% end %>  
   
 <h1><<<<<<<<<<<<<<<ここから下がcheck_boxes>>>>>>>>>>>>>>>>>>>>>></h1>
 
@@ -42,21 +40,14 @@
   <% @festival.stages.each do |stage| %>
     <h1><%= stage.name %></h1>
       <% stage.artists.each do |artist| %>
-      
-      
         <ul style="list-style:none;">
-            <li><%= check_box "artist_ids", "#{artist.id}" %><%= "#{artist.name}" %></li>
+          <li><%= check_box "artist_ids", "#{artist.id}" %><%= "#{artist.name}" %></li>
         </ul>
-        
       <% end %>
  
   <% end %>
   <%= submit_tag("確定") %>
 <% end %>
-
-
-
-<h1><<<<<<<<<<<<<<<ここから下がjavascript>>>>>>>>>>>>>>>>>>>>>></h1>
 
 <% @festival.stages.each do |stage| %>
   <h1><%= stage.name %></h1>
@@ -75,44 +66,3 @@
   <% end %>
 </form>
 <% end %>
-
-<script type="text/javascript">
-<!--
-$(function() {
-    $('#jquery-smaple-form input[name=jquery-smaple-checkbox]').change(
-        function() {
-            $('#jquery-smaple-form input').closest('label').css({
-                backgroundColor:'yellow',
-            });
-            $('#jquery-smaple-form :checked').closest('label').css({
-                backgroundColor:'pink',
-            });
-        }
-    ).change();
-    const result = $('#artist-data').data()
-    console.log(result) 
-});
-// -->
-</script>
-
-<style>
-<!--
-#jquery-smaple-form {
-    padding: 10px 5px;
-}
-#jquery-smaple-form input {
-    margin: 5px 5px 15px 5px;
-    cursor: pointer;
-}
-#jquery-smaple-form label {
-    margin: 5px;
-    padding: 5px 10px;
-    
-    border-radius: 10px;
-    
-    font-size: 15px;
-    color: #303030;
-    cursor: pointer;
-}
--->
-</style>
