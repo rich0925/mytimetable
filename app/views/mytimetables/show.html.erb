@@ -4,21 +4,24 @@
   </div>
   <p>period_id日目</p>
   
-<div class="mytimetable-create">
-  <table id="timetable" border="1">
-    <tr>
-      <% @festival.stages.each do |stage| %>
-        <th><%= stage.name %></th>
-      <% end %>  
-    </tr>
+<div class="table">
+  <div class="table__head">
     <% @festival.stages.each do |stage| %>
-      <% stage.artists.each do |artist| %>
-        <tr class="timetable-list">
-          <td><%= artist.name %></td>
-        </tr>
-      <% end %>
+      <div class="table__heading"><%= stage.name %></div>
+    <% end %>  
+  </div>
+
+  <div class="table__body">
+    <% @festival.stages.each do |stage| %>
+      <div class="table__columns">
+        <% stage.artists.each do |artist| %>
+          <div class="table__item">
+            <%= artist.name %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-  </table>
+  </div>
 </div>
 
 <% @festival.stages.each do |stage| %>

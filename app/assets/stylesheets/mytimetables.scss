@@ -1,23 +1,52 @@
-#jquery-smaple-form {
-  padding: 10px 5px;
-}
-#jquery-smaple-form input {
-  margin: 5px 5px 15px 5px;
-  cursor: pointer;
-}
-#jquery-smaple-form label {
-  margin: 5px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 15px;
-  color: #303030;
-  cursor: pointer;
-}
+// #timetable .timetable-list {
+//   cursor: pointer;
+//   transition: background 0.2s ease-in-out 0.1s;
+//   &--selected {
+//     background: #ffffff;
+//   }
+// }
 
-#timetable .timetable-list {
-  cursor: pointer;
-  transition: background 0.2s ease-in-out 0.1s;
-  &--selected {
-    background: #ffffff;
+.table {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 18px;
+  border: 1px solid #fff;
+  &__head {
+    display: flex;
+    border-bottom: 1px solid #fff;
+  }
+  &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 160px;
+    padding: 0 24px;
+    border-right: 1px solid #fff;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+  }
+  &__columns {
+    width: 160px;
+    border-right: 1px solid #fff;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  &__item {
+    height: 80px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
