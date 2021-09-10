@@ -2,7 +2,6 @@ class MytimetablesController < ApplicationController
   def show
     @festival = Festival.find(params[:id])
     @stages = Stage.where(festival_id: @festival.id)
-    
   end
   
   def index
@@ -17,5 +16,4 @@ class MytimetablesController < ApplicationController
     @festival = Festival.find(params[:id])
   end
   
-
 end
