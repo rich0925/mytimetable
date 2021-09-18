@@ -50,4 +50,12 @@ Artist.create!([
   { stage_id: 2,  name: 'official higedan dism' },
   { stage_id: 2,  name: 'KICK THE CAN CREW' },
   { stage_id: 2,  name: 'HYDE' },
+  { stage_id: 3,  name: 'POLYSICS' },
+  { stage_id: 3,  name: 'GOOD4NOTHING' },
+  { stage_id: 3,  name: 'OKAMOTOS' },
+  { stage_id: 3,  name: '175R' },
+  { stage_id: 3,  name: 'SPECIAL OTHERS' },
+  { stage_id: 3,  name: 'gosuperas' },
+  { stage_id: 3,  name: 'THE BACK HORN' },
+  { stage_id: 3,  name: 'CAPSULE' },
 ])

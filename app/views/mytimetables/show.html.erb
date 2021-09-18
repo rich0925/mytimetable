@@ -16,6 +16,13 @@
       <div class="table__columns">
         <% stage.artists.each do |artist| %>
           <div class="table__item">
+            <div class="table__item-time">
+              <% if !artist.starttime.nil? %>
+                <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
+              <% else %>
+                <%= artist.starttime %>
+              <% end %>
+            </div>
             <%= artist.name %>
           </div>
         <% end %>
@@ -24,48 +31,37 @@
   </div>
 </div>
 
-<% @festival.stages.each do |stage| %>
-  <table border="1">
-    <tr>
-      <th><%= stage.name %></th>
-    </tr>
-    <% stage.artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-      </tr>
-    <% end %>
-  </table>
-<% end %> 
-  
-<h1><<<<<<<<<<<<<<<ここから下がcheck_boxes>>>>>>>>>>>>>>>>>>>>>></h1>
+<%# a = 40 %>
+<%# b = 20 %>
+<%# c = a - b %>
+<%# i = c / 10 %>
 
-<%= form_tag(mytimetables_index_path(@festival.id), method: :post) do %>
-  <% @festival.stages.each do |stage| %>
-    <h1><%= stage.name %></h1>
-      <% stage.artists.each do |artist| %>
-        <ul style="list-style:none;">
-          <li><%= check_box "artist_ids", "#{artist.id}" %><%= "#{artist.name}" %></li>
-        </ul>
-      <% end %>
-  <% end %>
-  <%= submit_tag("確定") %>
-<% end %>
+<table border="3" class="big">
+  <tr>
+    <th>時間</th><th>ステージ</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td rowspan="<%= @time %>">6つのセルを結合</td>
+  </tr>
+  <tr>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>60</td>
+  </tr>
+</table>
 
-
-<% @festival.stages.each do |stage| %>
-  <h1><%= stage.name %></h1>
-<form id="jquery-smaple-form">
-  <% stage.artists.each do |artist| %>
-    <p>
-      <label id="artist-data" data-artist="<%= artist.name %>" data-starttime="10:30" data-endtime="11:20">
-        <input type="checkbox" name="jquery-smaple-checkbox" checked="checked" />
-        <% if !artist.starttime.nil? %>
-          <%= artist.name %>：<%= artist.starttime.strftime("%H:%M") %>～<%= artist.endtime.strftime("%H:%M") %>
-        <% else %>
-          <%= artist.name %>
-        <% end %>
-      </label>
-    </p>
-  <% end %>
-</form>
-<% end %>
+<%= @time %>
