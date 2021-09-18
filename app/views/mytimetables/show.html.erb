@@ -13,10 +13,14 @@
 
   <div class="table__body">
     <% @festival.stages.each do |stage| %>
-      <div class="table__columns">
+      <div id="table-cell" class="table__columns">
         <% stage.artists.each do |artist| %>
           <div class="table__item">
-            <%= artist.name %>
+            <% if artist.name.length == 0 %>
+              出演アーティストはいません
+            <% else %>
+              <%= artist.name %>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -24,48 +28,3 @@
   </div>
 </div>
 
-<% @festival.stages.each do |stage| %>
-  <table border="1">
-    <tr>
-      <th><%= stage.name %></th>
-    </tr>
-    <% stage.artists.each do |artist| %>
-      <tr>
-        <td><%= artist.name %></td>
-      </tr>
-    <% end %>
-  </table>
-<% end %>  
-  
-<h1><<<<<<<<<<<<<<<ここから下がcheck_boxes>>>>>>>>>>>>>>>>>>>>>></h1>
-
-<%= form_tag(mytimetables_index_path(@festival.id), method: :post) do %>
-  <% @festival.stages.each do |stage| %>
-    <h1><%= stage.name %></h1>
-      <% stage.artists.each do |artist| %>
-        <ul style="list-style:none;">
-          <li><%= check_box "artist_ids", "#{artist.id}" %><%= "#{artist.name}" %></li>
-        </ul>
-      <% end %>
- 
-  <% end %>
-  <%= submit_tag("確定") %>
-<% end %>
-
-<% @festival.stages.each do |stage| %>
-  <h1><%= stage.name %></h1>
-<form id="jquery-smaple-form">
-  <% stage.artists.each do |artist| %>
-    <p>
-      <label id="artist-data" data-artist="<%= artist.name %>" data-starttime="10:30" data-endtime="11:20">
-        <input type="checkbox" name="jquery-smaple-checkbox" checked="checked" />
-        <% if !artist.starttime.nil? %>
-          <%= artist.name %>：<%= artist.starttime.strftime("%H:%M") %>～<%= artist.endtime.strftime("%H:%M") %>
-        <% else %>
-          <%= artist.name %>
-        <% end %>
-      </label>
-    </p>
-  <% end %>
-</form>
-<% end %>

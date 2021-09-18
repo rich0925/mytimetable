@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#timetable .timetable-list").click(function () {
-    $(this).toggleClass("timetable-list--selected");
+  $("#table-cell .table__item").click(function () {
+    $(this).toggleClass("table__item--selected");
   });
 });
