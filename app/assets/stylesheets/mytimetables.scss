@@ -8,6 +8,9 @@
     border-bottom: 1px solid #fff;
   }
   &__heading {
+    font-size: 20px;
+    color: #808080;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,4 +49,20 @@
       background: #ffffff;
     }
   }
+  &__item-time {
+    color: #ff0000;
+    font-size: 10px;
+    margin-right: auto;
+  }
+}
+
+.table__item.isActive {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/*big???*/
+
+.big {
+  font-size: 50px;
 }
