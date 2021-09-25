@@ -9,7 +9,7 @@
 .header-user-operation {
   padding: 0px;
   margin: 30px;
-  color: #FFF;
+  color: #fff;
   font-size: 30px;
 }
 
@@ -17,262 +17,244 @@
   padding-right: 10px;
   margin: 4px;
   float: left;
-  
 }
 
 .navbar-transparent {
   margin-bottom: 0px;
   width: 100%;
   padding: 30px 4% 10px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   a {
     color: #fff !important;
   }
 }
 
-
-  
-  
 /*トップページ*/
 
-h1, h2 {
-    font-weight: 100;
-  }
-  
-  .title {
-    font-size: 80px;
-    padding-top: 220px;
-  }
-  
-  .text-white {
+h1,
+h2 {
+  font-weight: 100;
+}
+
+.title {
+  font-size: 80px;
+  padding-top: 220px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-brack {
+  color: #000;
+}
+
+.fes-list {
+  font-size: 50px;
+}
+
+.btn-white {
+  color: #fff;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+
+  &:hover {
     color: #fff;
   }
-  
-  .text-brack {
-    color: #000	;
-  }
-  
-  .fes-list {
-    font-size: 50px;
-  }
-  
-  
-  
-  .btn-white {
-    color: #fff;
-    border: 1px solid #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.0);
-  
-    &:hover {
-      color: #fff;
-    }
-  }
-  
-  .top-hero-wrapper {
-    width: 100vw;
-    background-image: image-url('');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-  }
-  
-  .top-hero-container {
-    h1 {
-      font-size: 56px;
-      margin-bottom: 20px;
-    }
-  
-    h2 {
-      margin-bottom: 60px;
-    }
-  }
-  
-  .row {
-    margin: 40px;
-  }
-  
-  
-  
-  
-  .title-mytimetable {
-     margin-left:auto;           /* IE以外用の中央寄せ */
-     margin-right:auto;          /* IE以外用の中央寄せ */
-    
-     width:700px;                /* 幅 */
-     height:200px;               /* 高さ */
-     border:solid 3px #FFFFFF;   /* 枠線 */
-     background-color:#FFFFFF;   /* 背景色 */
-     color:#ffffff;              /* 文字色 */
-  }
-  
-  
-  .input-mytimetable {
-      
-      padding: 0.5em 1em;
-      margin: 2em 0;
-      font-weight: bold;
-      color: #6091d3;/*文字色*/
-      background: #FFF;
-      border: solid 3px #6091d3;/*線*/
-      border-radius: 10px;/*角の丸み*/
-  }
-  
-  .input-mytimetable p {
-      margin: 0; 
-      padding: 0;
-  }
-  
-  .Time-title {
-    font-size: 80px;
-  }
-  
-  .Time-select {
-    padding-left: 100px;
-  }
-  
-  .time-title {
-    width: 200px;
-    height: 110px;
+}
+
+.top-hero-wrapper {
+  width: 100vw;
+  background-image: image-url("");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
   }
 
-  .Artist-title {
-    font-size: 80px;
+  h2 {
+    margin-bottom: 60px;
   }
-  
- .artist-title {
-     width: 300px;
- }
+}
 
- .Stage-title {
-    font-size: 80px;
-  }
-  
- .stage-title {
-     width: 300px;
- }
+.row {
+  margin: 40px;
+}
 
+.title-mytimetable {
+  margin-left: auto; /* IE以外用の中央寄せ */
+  margin-right: auto; /* IE以外用の中央寄せ */
+
+  width: 700px; /* 幅 */
+  height: 200px; /* 高さ */
+  border: solid 3px #ffffff; /* 枠線 */
+  background-color: #ffffff; /* 背景色 */
+  color: #ffffff; /* 文字色 */
+}
+
+.input-mytimetable {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: #6091d3; /*文字色*/
+  background: #fff;
+  border: solid 3px #6091d3; /*線*/
+  border-radius: 10px; /*角の丸み*/
+}
+
+.input-mytimetable p {
+  margin: 0;
+  padding: 0;
+}
+
+.Time-title {
+  font-size: 80px;
+}
+
+.Time-select {
+  padding-left: 100px;
+}
+
+.time-title {
+  width: 200px;
+  height: 110px;
+}
+
+.Artist-title {
+  font-size: 80px;
+}
+
+.artist-title {
+  width: 300px;
+}
+
+.Stage-title {
+  font-size: 80px;
+}
+
+.stage-title {
+  width: 300px;
+}
 
 /*ヘッダー*/
 
 .header {
-    text-align: right;
+  text-align: right;
 }
 
 .header-btn {
-    
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 20px;
-    background-color: rgb(255, 255, 255);
-  }
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+}
 
+/*ここからfestival/show*/
 
+.festival-index-wrapper {
+  text-align: center;
+  background-color: #464646;
+}
 
+.text-festival {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 60px;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+}
 
+.festival-image img {
+  width: 1000px;
+}
 
-  /*ここからfestival/show*/
-
-  .festival-index-wrapper {
-    
-    text-align: center;
-    background-color: #464646;
-  }
-  
-  .text-festival {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 60px;
-    padding: 1rem 2rem;
-    background: #f4f4f4;
-  }
-
-  .festival-image img {
-    width: 1000px;  
-  }
-
-  .festival-toha {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 50px;
-    padding: 1rem 2rem;
-    background: #f4f4f4;
-  }
-  
+.festival-toha {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 50px;
+  padding: 1rem 2rem;
+  background: #f4f4f4;
+}
 
 .festival-overview {
-    width: 50%;
-    position: relative;
-    margin: 2em auto;
-    padding: 25px 10px 7px;
-    border: solid 2px #FFC107;
-    background: #f4f4f4;
+  width: 50%;
+  position: relative;
+  margin: 2em auto;
+  padding: 25px 10px 7px;
+  border: solid 2px #ffc107;
+  background: #f4f4f4;
 }
 
 .festival-overview .box-title {
-    position: absolute;
-    display: inline-block;
-    top: -2px;
-    left: -2px;
-    padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #FFC107;
-    color: #000;
-    font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #ffc107;
+  color: #000;
+  font-weight: bold;
 }
 
 .festival-place {
-    width: 50%;
-    position: relative;
-    margin: 2em auto;
-    padding: 25px 10px 7px;
-    border: solid 2px #FFC107;
-    background: #f4f4f4;
+  width: 50%;
+  position: relative;
+  margin: 2em auto;
+  padding: 25px 10px 7px;
+  border: solid 2px #ffc107;
+  background: #f4f4f4;
 }
 
 .festival-place .box-place {
-    position: absolute;
-    display: inline-block;
-    top: -2px;
-    left: -2px;
-    padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #FFC107;
-    color: #000;
-    font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #ffc107;
+  color: #000;
+  font-weight: bold;
 }
 
 .festival-feature {
-    width: 50%;
-    position: relative;
-    margin: 2em auto;
-    padding: 25px 10px 7px;
-    border: solid 2px #FFC107;
-    background: #f4f4f4;
+  width: 50%;
+  position: relative;
+  margin: 2em auto;
+  padding: 25px 10px 7px;
+  border: solid 2px #ffc107;
+  background: #f4f4f4;
 }
 
 .festival-feature .box-feature {
-    position: absolute;
-    display: inline-block;
-    top: -2px;
-    left: -2px;
-    padding: 0 9px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 17px;
-    background: #FFC107;
-    color: #000;
-    font-weight: bold;
+  position: absolute;
+  display: inline-block;
+  top: -2px;
+  left: -2px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  background: #ffc107;
+  color: #000;
+  font-weight: bold;
 }
 
 .festival-comment-title {
@@ -287,13 +269,13 @@ h1, h2 {
 
 .festival-comment-list {
   width: 400px;
-　text-align:center;
+  　text-align: center;
   padding: 0.5em 1em;
   margin: 2em auto;
   color: #474747;
-  background: whitesmoke;/*背景色*/
-  border-left: double 7px #000;/*左線*/
-  border-right: double 7px #000;/*右線*/
+  background: whitesmoke; /*背景色*/
+  border-left: double 7px #000; /*左線*/
+  border-right: double 7px #000; /*右線*/
 }
 
 .comment-left {
@@ -303,7 +285,7 @@ h1, h2 {
 .festivalname-and-username {
   padding: 1em;
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
 }
 
 /*festival/showのタイムテーブル作成*/
@@ -316,71 +298,72 @@ h1, h2 {
   font-size: 30px;
 }
 
-td{empty-cells: hide;}
-
+td {
+  empty-cells: hide;
+}
 
 /*ここからユーザー作成画面*/
 
 .form-control {
-    height: 45px;
-  }
-  
-  .users-new-wrapper {
-    width: 100vw;
-    height: 100vh;
-    background-image: image-url('bg-top.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-  
-    .users-new-container {
-      padding-top: 220px;
-  
-      .form-group {
-        margin-bottom: 20px;
-      }
+  height: 45px;
+}
+
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url("bg-top.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .users-new-container {
+    padding-top: 220px;
+
+    .form-group {
+      margin-bottom: 20px;
     }
   }
+}
 
-  .alert {
-    margin-bottom: 0px;
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-  }
-  
-  /* コメント編集 */
-  
-  .comment-edit-title {
-    padding-top: 220px;
-  }
-  
-  /* artist/index */
-  
-  .artist-title {
-    padding-top: 220px;
-  }
-  
-  /* festival_selects/index */
-  
-  .festival_select-index-wrapper {
-    text-align: center;
-    background-color: #464646;
-  }
-  
-  .festival-select-list {
-    padding: 20px;
-  }
-  
-  .btn--orange,
-  a.btn--orange {
-    color: #fff;
-    background-color: #eb6100;
-  }
-  .btn--orange:hover,
-  a.btn--orange:hover {
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+/* コメント編集 */
+
+.comment-edit-title {
+  padding-top: 220px;
+}
+
+/* artist/index */
+
+.artist-title {
+  padding-top: 220px;
+}
+
+/* festival_selects/index */
+
+.festival_select-index-wrapper {
+  text-align: center;
+  background-color: #464646;
+}
+
+.festival-select-list {
+  padding: 20px;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
   color: #fff;
   background: #f56500;
 }
@@ -390,8 +373,9 @@ td{empty-cells: hide;}
 .mytimetable-show-wrapper {
   text-align: center;
   background-color: #464646;
+  padding-bottom: 120px;
 }
 
 .artist-name {
-  color: #FF8856;
+  color: #ff8856;
 }
