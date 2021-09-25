@@ -4,30 +4,32 @@
   </div>
   <p>period_id日目</p>
   
-<div class="table">
-  <div class="table__head">
-    <% @festival.stages.each do |stage| %>
-      <div class="table__heading"><%= stage.name %></div>
-    <% end %>  
-  </div>
+  <div class="table">
+    <div class="table__head">
+      <% @festival.stages.each do |stage| %>
+        <div class="table__heading">
+          <%= stage.name %>
+        </div>
+      <% end %>
+    </div>
 
-  <div class="table__body">
-    <% @festival.stages.each do |stage| %>
-      <div class="table__columns">
-        <% stage.artists.each do |artist| %>
-          <div class="table__item">
-            <div class="table__item-time">
-              <% if !artist.starttime.nil? %>
-                <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
-              <% else %>
-                <%= artist.starttime %>
-              <% end %>
+    <div class="table__body">
+      <% @festival.stages.each do |stage| %>
+        <div class="table__columns">
+          <% stage.artists.each do |artist| %>
+            <div class="table__item">
+              <div class="table__item-time">
+                <% if !artist.starttime.nil? %>
+                  <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
+                <% else %>
+                  <%= artist.starttime %>
+                <% end %>
+              </div>
+              <%= artist.name %>
             </div>
-            <%= artist.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
-
