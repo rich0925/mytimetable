@@ -45,6 +45,11 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  # [Notice] cloud9で開発する際は不要のため gem 'rb-readline' は削除してください。※ローカル開発の際にエラーになったため導入
+  gem 'rb-readline'
+  # [Notice] cloud9で開発するエラーになるため gem 'rails-erd' は削除してください。※モデルの記述からER図を作成するためのgemです
+  # [FYI] https://www.sejuku.net/blog/66196
+  gem 'rails-erd'
 end
 
 group :development do
