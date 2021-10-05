@@ -11,16 +11,16 @@ if Artist.all.count > 0
 end
 
 Festival.create!([
-  { id: 1, name: 'ROCK IN JAPAN FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 2, name: 'FUJI ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 3, name: 'RISING SUN ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 4, name: 'SUMMER SONIC' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 5, name: 'COUNTDOWN JAPAN' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 6, name: 'RADIO CRAZY' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 7, name: 'VIVA LA ROCK' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 8, name: 'JAPAN JAM' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 9, name: 'METROPOLITAN ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3},
-  { id: 10,name: 'SWEET LOVE SHOWER' , starttime: '9:00', endtime: '21:00', period: 3}
+  { id: 1, name: 'ROCK IN JAPAN FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 2, name: 'FUJI ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 3, name: 'RISING SUN ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 4, name: 'SUMMER SONIC' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 5, name: 'COUNTDOWN JAPAN' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 6, name: 'RADIO CRAZY' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 7, name: 'VIVA LA ROCK' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 8, name: 'JAPAN JAM' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 9, name: 'METROPOLITAN ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
+  { id: 10,name: 'SWEET LOVE SHOWER' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12}
 ])
  
 

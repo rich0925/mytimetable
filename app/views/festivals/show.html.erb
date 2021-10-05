@@ -75,16 +75,7 @@
     </div>
     
     <p>日付</p>
-    
         <% for period in 1..@festival.period do %>
         <%= link_to period ,mytimetable_path(@festival.id, period)  , class: 'btn btn-block btn-white' %>
         <% end %>
-    
-    
-
 </div>
-
-       
-
-    
-

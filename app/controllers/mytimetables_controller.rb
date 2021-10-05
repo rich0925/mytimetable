@@ -3,10 +3,7 @@ class MytimetablesController < ApplicationController
     @festival = Festival.find(params[:id])
     @stages = Stage.where(festival_id: @festival.id)
     
-    a = 40
-    b = 20
-    c = a - b
-    @time = c / 10
+
   end
   
   def index
