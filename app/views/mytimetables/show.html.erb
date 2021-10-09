@@ -6,15 +6,18 @@
   
   <div class="table">
     <div class="table__head">
-      <% @festival.stages.each do |stage| %>
+      
+      <% @festivalday.stages.each do |stage| %>
         <div class="table__heading">
           <%= stage.name %>
         </div>
+        
       <% end %>
     </div>
     
     <div class="table__body" style="height: <%= computedTableBodyHeight %>px">
-      <% @festival.stages.each do |stage| %>
+      
+      <% @festivalday.stages.each do |stage| %>
         <div class="table__columns">
           <% stage.artists.each do |artist| %>
             <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
@@ -29,6 +32,7 @@
           </div>
           <% end %>
         </div>
+        
       <% end %>
     </div>
   </div>
