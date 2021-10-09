@@ -11,8 +11,11 @@ Rails.application.routes.draw do
   
   resources :users
   resources :comments
-  resources :festivals, only: [:index, :show, :edit]
-  resources :mytimetables
+  resources :festivals, only: [:index, :show, :edit] do
+    resources :festivaldays do
+      resources :mytimetables
+    end
+  end
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

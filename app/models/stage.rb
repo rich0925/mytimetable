@@ -1,4 +1,4 @@
 class Stage < ApplicationRecord
-  belongs_to :festival, optional: true
+  belongs_to :festivaldays, optional: true
   has_many :artists
 end
