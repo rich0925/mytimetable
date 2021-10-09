@@ -22,18 +22,22 @@ Festival.create!([
   { id: 9, name: 'METROPOLITAN ROCK FESTIVAL' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12},
   { id: 10,name: 'SWEET LOVE SHOWER' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12}
 ])
+
+Festivaldays.create!([
+  { festival_id: 1, day: 1},
+  { festival_id: 2, day: 1},
+])
  
 
 Stage.create!([
-  { id: 1, festival_id: 1, day: '1', name: 'GRASS STAGE' },
-  { id: 2, festival_id: 1, day: '1', name: 'PARK STAGE' },
-  { id: 3, festival_id: 1, day: '1', name: 'LAKE STAGE' },
-  { id: 4, festival_id: 1, day: '1', name: 'SOUND OF FOREST' },
-  { id: 5, festival_id: 1, day: '1', name: 'BUZZ STAGE' },
-  { id: 6, festival_id: 1, day: '1', name: 'WING STAGE' },
-  { id: 7, festival_id: 1, day: '1', name: 'HILLSIDE STAGE' },
+  { festival_id: 1, day: '1', name: 'GRASS STAGE' },
+  { festival_id: 1, day: '1', name: 'PARK STAGE' },
+  { festival_id: 1, day: '1', name: 'LAKE STAGE' },
+  { festival_id: 1, day: '1', name: 'SOUND OF FOREST' },
+  { festival_id: 1, day: '1', name: 'BUZZ STAGE' },
+  { festival_id: 1, day: '1', name: 'WING STAGE' },
+  { festival_id: 1, day: '1', name: 'HILLSIDE STAGE' },
 ])
-
 
 Artist.create!([
   { stage_id: 1, starttime: '10:30', endtime: '11:20', appearancetime: '0.8', totalstarttime: '1.5', name: 'yuzu' },
@@ -88,4 +92,5 @@ Artist.create!([
   { stage_id: 7, starttime: '15:00', endtime: '15:30', appearancetime: '0.5', totalstarttime: '6', name: 'PEDRO' },
   { stage_id: 7, starttime: '16:15', endtime: '16:45', appearancetime: '0.5', totalstarttime: '7.25', name: 'nano.RIPE' },
   { stage_id: 7, starttime: '17:25', endtime: '18:00', appearancetime: '0.6', totalstarttime: '8.3', name: 'zookaraderu' },
+  { stage_id: 8, starttime: '10:30', endtime: '11:20', appearancetime: '0.8', totalstarttime: '1.5', name: 'ABCDEFG' },
 ])
