@@ -2,6 +2,10 @@ if Festival.all.count > 0
   Festival.delete_all
 end
 
+if Festivalday.all.count > 0
+  Festivalday.delete_all
+end
+
 if Stage.all.count > 0
   Stage.delete_all
 end
@@ -23,20 +27,21 @@ Festival.create!([
   { id: 10,name: 'SWEET LOVE SHOWER' , starttime: '9:00', endtime: '21:00', period: 3, totaltime: 12}
 ])
 
-Festivaldays.create!([
-  { festival_id: 1, day: 1},
-  { festival_id: 2, day: 1},
+Festivalday.create!([
+  { festival_id: 1, days: 1},
+  { festival_id: 1, days: 2},
+  { festival_id: 1, days: 3},
 ])
  
 
 Stage.create!([
-  { festival_id: 1, day: '1', name: 'GRASS STAGE' },
-  { festival_id: 1, day: '1', name: 'PARK STAGE' },
-  { festival_id: 1, day: '1', name: 'LAKE STAGE' },
-  { festival_id: 1, day: '1', name: 'SOUND OF FOREST' },
-  { festival_id: 1, day: '1', name: 'BUZZ STAGE' },
-  { festival_id: 1, day: '1', name: 'WING STAGE' },
-  { festival_id: 1, day: '1', name: 'HILLSIDE STAGE' },
+  { festivalday_id: 1, name: 'GRASS STAGE' },
+  { festivalday_id: 1, name: 'PARK STAGE' },
+  { festivalday_id: 1, name: 'LAKE STAGE' },
+  { festivalday_id: 1, name: 'SOUND OF FOREST' },
+  { festivalday_id: 1, name: 'BUZZ STAGE' },
+  { festivalday_id: 1, name: 'WING STAGE' },
+  { festivalday_id: 1, name: 'HILLSIDE STAGE' },
 ])
 
 Artist.create!([

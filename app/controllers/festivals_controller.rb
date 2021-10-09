@@ -14,6 +14,7 @@ class FestivalsController < ApplicationController
     @festival = Festival.find(params[:id])
     @festivals = Festival.all
     @comment = Comment.new
+    @festivaldays = Festivalday.where(festival_id: @festival.id)
   end
   
   

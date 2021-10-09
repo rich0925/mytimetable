@@ -1,7 +1,7 @@
 class CreateStages < ActiveRecord::Migration[5.2]
   def change
     create_table :stages do |t|
-      t.integer :festivaldays_id
+      t.integer :festivalday_id
       t.string :name
 
       t.timestamps

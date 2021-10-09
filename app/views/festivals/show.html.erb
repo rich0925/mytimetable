@@ -75,7 +75,9 @@
     </div>
     
     <p>日付</p>
-        <% for period in 1..@festival.period do %>
-        <%= link_to period ,mytimetable_path(@festival.id, period)  , class: 'btn btn-block btn-white' %>
+    <% @festivals.each do |festival| %>
+        <% festival.festivaldays.each do |festivalday| %>
+            <%= link_to festivalday.days, festival_festivalday_mytimetable_path(festival.id, festivalday.id )  , class: 'btn btn-block btn-white' %>
         <% end %>
+    <% end %>
 </div>

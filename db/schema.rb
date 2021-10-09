@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_10_09_033836) do
   end
 
   create_table "stages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "festivaldays_id"
+    t.integer "festivalday_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

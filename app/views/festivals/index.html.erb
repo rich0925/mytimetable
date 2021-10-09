@@ -14,7 +14,7 @@
     </div>
     
     <% @festivals.each do |festival| %>
-        <%= link_to festival.name , festival_path , class: 'btn btn-block btn-white' %>
+        <%= link_to festival.name , festival_path(festival.id) , class: 'btn btn-block btn-white' %>
     <% end %>
     
 

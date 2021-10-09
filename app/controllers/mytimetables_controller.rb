@@ -9,14 +9,14 @@ class MytimetablesController < ApplicationController
   end
   
   def index
-    checked_artist_ids = []
-    params[:artist_ids].each do |k, v|
-      if v == "1"
-        checked_artist_ids << k
-      end
-    end
-    @artists = Artist.where(id: checked_artist_ids)
+    # checked_artist_ids = []
+    # params[:artist_ids].each do |k, v|
+    #   if v == "1"
+    #     checked_artist_ids << k
+    #   end
+    # end
+    # @artists = Artist.where(id: checked_artist_ids)
     
-    @festival = Festival.find(params[:id])
+    # @festival = Festival.find(params[:id])
   end
 end
