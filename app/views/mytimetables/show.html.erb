@@ -2,22 +2,24 @@
   <div class="title">
     <h1><%= @festival.name %></h1>
   </div>
-  <p><%= @period_id %>日目</p>
+  <p><%= @festivalday.date %>日目</p>
   
   <div class="table">
     <div class="table__head">
       
-      <% @festivalday.stages.each do |stage| %>
+
+    <% @stages.each do |stage| %>
         <div class="table__heading">
           <%= stage.name %>
         </div>
-        
-      <% end %>
+    <% end %>
     </div>
     
+
+    
     <div class="table__body" style="height: <%= computedTableBodyHeight %>px">
-      
-      <% @festivalday.stages.each do |stage| %>
+      <% @festival.festivaldays.each do |festivalday| %>
+      <% festivalday.stages.each do |stage| %>
         <div class="table__columns">
           <% stage.artists.each do |artist| %>
             <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
@@ -32,7 +34,7 @@
           </div>
           <% end %>
         </div>
-        
+        <% end %>
       <% end %>
     </div>
   </div>

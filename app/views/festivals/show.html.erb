@@ -75,9 +75,7 @@
     </div>
     
     <p>日付</p>
-    <% @festivals.each do |festival| %>
-        <% festival.festivaldays.each do |festivalday| %>
-            <%= link_to festivalday.days, festival_festivalday_mytimetable_path(festival.id, festivalday.id )  , class: 'btn btn-block btn-white' %>
+        <% @festival.festivaldays.each do |festivalday| %>
+            <%= link_to festivalday.days, festival_festivalday_mytimetable_path(@festival.id, festivalday.id )  , class: 'btn btn-block btn-white' %>
         <% end %>
-    <% end %>
 </div>

@@ -28,9 +28,9 @@ Festival.create!([
 ])
 
 Festivalday.create!([
-  { festival_id: 1, days: 1},
-  { festival_id: 1, days: 2},
-  { festival_id: 1, days: 3},
+  { festival_id: 1, date: 1},
+  { festival_id: 1, date: 2},
+  { festival_id: 1, date: 3},
 ])
  
 
@@ -42,6 +42,13 @@ Stage.create!([
   { festivalday_id: 1, name: 'BUZZ STAGE' },
   { festivalday_id: 1, name: 'WING STAGE' },
   { festivalday_id: 1, name: 'HILLSIDE STAGE' },
+  { festivalday_id: 2, name: 'GRASS STAGE' },
+  { festivalday_id: 2, name: 'PARK STAGE' },
+  { festivalday_id: 2, name: 'LAKE STAGE' },
+  { festivalday_id: 2, name: 'SOUND OF FOREST' },
+  { festivalday_id: 2, name: 'BUZZ STAGE' },
+  { festivalday_id: 2, name: 'WING STAGE' },
+  { festivalday_id: 2, name: 'HILLSIDE STAGE' },
 ])
 
 Artist.create!([
@@ -74,8 +81,8 @@ Artist.create!([
   { stage_id: 4, starttime: '15:50', endtime: '16:25', appearancetime: '0.6', totalstarttime: '6.9', name: 'Plastic Tree' },
   { stage_id: 4, starttime: '17:00', endtime: '17:35', appearancetime: '0.6', totalstarttime: '8', name: 'nakamura kazuki' },
   { stage_id: 4, starttime: '18:10', endtime: '18:50', appearancetime: '0.7', totalstarttime: '9.2', name: 'the HIATUS' },
-  { stage_id: 5, starttime: '8:50', endtime: '10:00', appearancetime: '1.2', totalstarttime: '0', name: 'DJ TEKINA' },
-  { stage_id: 5, starttime: '10:05', endtime: '10:20', appearancetime: '0.25', totalstarttime: '1.1', name: 'RO JACK' },
+  { stage_id: 5, starttime: '8:50', endtime: '10:00', appearancetime: '1.1', totalstarttime: '0', name: 'DJ TEKINA' },
+  { stage_id: 5, starttime: '10:05', endtime: '10:20', appearancetime: '0.25', totalstarttime: '1.2', name: 'RO JACK' },
   { stage_id: 5, starttime: '11:20', endtime: '11:50', appearancetime: '0.5', totalstarttime: '2.4', name: 'necry talkey' },
   { stage_id: 5, starttime: '12:35', endtime: '13:05', appearancetime: '0.5', totalstarttime: '3.6', name: 'Akiyama Kiro' },
   { stage_id: 5, starttime: '13:50', endtime: '14:20', appearancetime: '0.5', totalstarttime: '4.9', name: 'banndoharasument' },
