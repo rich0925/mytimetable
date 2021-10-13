@@ -1,5 +1,5 @@
 $(function () {
-  $(".table__item").click(function () {
+  $(document).on('click',".table__item",function () {
     $(this).toggleClass("isActive");
   });
 });

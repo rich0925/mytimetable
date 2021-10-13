@@ -1,7 +1,7 @@
 class MytimetablesController < ApplicationController
   def show
     @festival = Festival.find(params[:id])
-    @festivalday = Festivalday.find(params[:id])
+    @festivalday = Festivalday.find(params[:festivalday_id])
     @festivaldays = Festivalday.where(festival_id: @festival.id)
     @stages = Stage.where(festivalday_id: @festivalday.id)
     

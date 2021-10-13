@@ -52,7 +52,7 @@ Stage.create!([
 ])
 
 Artist.create!([
-  { stage_id: 1, starttime: '10:30', endtime: '11:20', appearancetime: '0.8', totalstarttime: '1.5', name: 'yuzu' },
+  { stage_id: 1, starttime: '10:30', endtime: '11:20', appearancetime: '0.8', totalstarttime: '1.5', name: 'ゆず' },
   { stage_id: 1, starttime: '11:45', endtime: '11:35', appearancetime: '0.8', totalstarttime: '2.75', name: 'golden bomber' },
   { stage_id: 1, starttime: '13:00', endtime: '13:50', appearancetime: '0.8', totalstarttime: '4', name: 'frederic' },
   { stage_id: 1, starttime: '14:15', endtime: '15:05', appearancetime: '0.8', totalstarttime: '5.25', name: 'sumika' },
@@ -104,5 +104,4 @@ Artist.create!([
   { stage_id: 7, starttime: '15:00', endtime: '15:30', appearancetime: '0.5', totalstarttime: '6', name: 'PEDRO' },
   { stage_id: 7, starttime: '16:15', endtime: '16:45', appearancetime: '0.5', totalstarttime: '7.25', name: 'nano.RIPE' },
   { stage_id: 7, starttime: '17:25', endtime: '18:00', appearancetime: '0.6', totalstarttime: '8.3', name: 'zookaraderu' },
-  { stage_id: 8, starttime: '10:30', endtime: '11:20', appearancetime: '0.8', totalstarttime: '1.5', name: 'ABCDEFG' },
 ])
