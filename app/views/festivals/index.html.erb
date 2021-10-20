@@ -85,7 +85,7 @@
           <% if !@artist.nil? %>
             <p><%= @artist.name %></p>
           <% end %>
-           <%= link_to 'アーティスト', artists_index_path %></p>
+           <%= link_to 'アーティスト', artists_path %></p>
         </div>
       </div>
        <div class="col-md-4">
@@ -120,7 +120,8 @@
       
     </script>
   </div>
-    <%= link_to "my time tableを作成する" , festival_selects_index_path , class: 'btn btn-block btn-white' %>
 </div>
 </div>
-
+<h1 class="text-brack">
+  <%= link_to "artist登録" , new_artist_path, class: 'btn btn-block btn-brack' %>
+</h1>

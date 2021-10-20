@@ -38,7 +38,6 @@
                 <% if current_user == comment.user %>
                     <%= link_to "削除", comment_path(comment.id), method: :delete %>
                     <%= link_to "編集", edit_comment_path(comment.id) %>
-                    
                 <% end %>
             </p>
             </div>

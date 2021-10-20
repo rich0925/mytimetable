@@ -2,16 +2,9 @@
   <h1>Artists#index</h1>
 </div>
 
-<div class="artist-list-top">
-  <p>あ行</p>
-  <% Gyou.agyou.artists.each do |artist| %>
-  <p><%= link_to artist.name,festivals_path(artist_id: artist.id) %></p>
-  <% end %>
-</div>
-
-<div class="artist-list-top">
-  <p>か行</p>
-  <% Gyou.kagyou.artists.each do |artist| %>
-  <p><%= link_to artist.name,festivals_path(artist_id: artist.id) %></p>
-  <% end %>
-</div>
+<% @artists.each do |artist| %>
+  <%= artist.id %>：<%= artist.name %>：<%= artist.stage_id %>：<%= artist.starttime %>：<%= artist.endtime %>：<%= artist.appearancetime %>：<%= artist.totalstarttime %>
+  <%= link_to "削除", artist_path(artist.id), method: :delete %>
+  <%= link_to "編集", edit_artist_path(artist.id) %>
+  <br>
+<% end %>

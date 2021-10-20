@@ -4,9 +4,6 @@ class MytimetablesController < ApplicationController
     @festivalday = Festivalday.find(params[:festivalday_id])
     @festivaldays = Festivalday.where(festival_id: @festival.id)
     @stages = Stage.where(festivalday_id: @festivalday.id)
-    
-    
-    
   end
   
   def index

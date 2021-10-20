@@ -1,41 +1,46 @@
 <div class="mytimetable-show-wrapper">
   <div class="title">
-    <h1><%= @festival.name %></h1>
-  </div>
-  <p><%= @festivalday.date %>日目</p>
-  
-  <div class="table">
-    <div class="table__head">
-      
-
-    <% @stages.each do |stage| %>
-        <div class="table__heading">
-          <%= stage.name %>
-        </div>
-    <% end %>
+    <button id="aaa">
+      ボタン
+    </button>
+    <div id="canvas">
+      <h1><%= @festival.name %></h1>
     </div>
+    <p><%= @festivalday.date %>日目</p>
     
-
-    
-    <div class="table__body" style="height: <%= computedTableBodyHeight %>px">
-      <% @festivalday.stages.each do |stage| %>
-        <div class="table__columns">
-          <% stage.artists.each do |artist| %>
-            <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
-              <div class="table__item-time">
-                <% if !artist.starttime.nil? %>
-                  <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
-                <% else %>
-                  <%= artist.starttime %>
-                <% end %>
-              </div>
-              <div class="table__item-artistname">
-                <%= artist.name %>
-              </div>
+    <div class="table">
+      <div class="table__head">
+        
+  
+      <% @stages.each do |stage| %>
+          <div class="table__heading">
+            <%= stage.name %>
           </div>
-          <% end %>
-        </div>
       <% end %>
+      </div>
+      
+  
+      
+      <div class="table__body" style="height: <%= computedTableBodyHeight %>px">
+        <% @festivalday.stages.each do |stage| %>
+          <div class="table__columns">
+            <% stage.artists.each do |artist| %>
+              <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
+                <div class="table__item-time">
+                  <% if !artist.starttime.nil? %>
+                    <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
+                  <% else %>
+                    <%= artist.starttime %>
+                  <% end %>
+                </div>
+                <div class="table__item-artistname">
+                  <%= artist.name %>
+                </div>
+            </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

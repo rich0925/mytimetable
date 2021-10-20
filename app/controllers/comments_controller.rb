@@ -28,11 +28,9 @@ class CommentsController < ApplicationController
   
   def edit
     @comment = Comment.find(params[:id])
-    
   end
   
   def update
-    
     @comment = Comment.find(params[:id])
   
     if @comment.update(comment_params)
@@ -40,11 +38,10 @@ class CommentsController < ApplicationController
     else
       render :new
     end
-    
-    
   end
   
   private
+  
   def comment_params
     params.require(:comment).permit(:comment, :festival_id)
   end
