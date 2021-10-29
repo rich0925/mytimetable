@@ -15,7 +15,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
-  socket: /var/lib/mysql/mysql.sock
+  # socket: /var/lib/mysql/mysql.sock
+  # [Notice] ローカルでの開発用で↓を設定しています。cloud9で開発する時は socket: /tmp/mysql.sock をコメントアウトして、 socket: /var/lib/mysql/mysql.sock の記述を使用してください！
+  socket: /tmp/mysql.sock
 
 development:
   <<: *default
