@@ -28,7 +28,7 @@
     color: #fff !important;
   }
 }
- 
+
 /*トップページ*/
 
 h1,
@@ -37,7 +37,7 @@ h2 {
 }
 
 .title {
-  font-size: 80px;
+  font-size: 40px;
   padding-top: 220px;
 }
 
@@ -62,11 +62,11 @@ h2 {
   background-color: rgba(0, 0, 0, 0);
 
   &:hover {
-      color: #fff;
-    }
+    color: #fff;
   }
-  
-  .top-hero-wrapper {
+}
+
+.top-hero-wrapper {
   width: 100vw;
   background-image: image-url("");
   background-position: center;
@@ -75,34 +75,34 @@ h2 {
   background-size: cover;
   background-color: #464646;
 }
-  
-  .top-hero-container {
+
+.top-hero-container {
   h1 {
     font-size: 56px;
     margin-bottom: 20px;
-    }
-  
-   h2 {
-    margin-bottom: 60px;
-    }
   }
-  
+
+  h2 {
+    margin-bottom: 60px;
+  }
+}
+
 .row {
   margin: 40px;
 }
-  
+
 .title-mytimetable {
   margin-left: auto; /* IE以外用の中央寄せ */
   margin-right: auto; /* IE以外用の中央寄せ */
   .title-mytimetable {
-  width: 700px; /* 幅 */
-  height: 200px; /* 高さ */
-  border: solid 3px #ffffff; /* 枠線 */
-  background-color: #ffffff; /* 背景色 */
-  color: #ffffff; /* 文字色 */
+    width: 700px; /* 幅 */
+    height: 200px; /* 高さ */
+    border: solid 3px #ffffff; /* 枠線 */
+    background-color: #ffffff; /* 背景色 */
+    color: #ffffff; /* 文字色 */
   }
 }
-  
+
 .input-mytimetable {
   padding: 0.5em 1em;
   margin: 2em 0;
@@ -117,7 +117,6 @@ h2 {
   padding: 0;
 }
 
-  
 .Time-title {
   font-size: 80px;
 }
@@ -130,7 +129,7 @@ h2 {
   width: 200px;
   height: 110px;
 }
-  
+
 .Artist-title {
   font-size: 80px;
 }
@@ -138,7 +137,7 @@ h2 {
 .artist-title {
   width: 300px;
 }
-  
+
 .Stage-title {
   font-size: 80px;
 }
@@ -303,7 +302,6 @@ td {
   empty-cells: hide;
 }
 
-
 /*ここからユーザー作成画面*/
 
 .form-control {
@@ -321,7 +319,7 @@ td {
 
   .users-new-container {
     padding-top: 220px;
- 
+
     .form-group {
       margin-bottom: 20px;
     }

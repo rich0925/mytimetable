@@ -1,46 +1,48 @@
 <div class="mytimetable-show-wrapper">
-  <div class="title">
-    <button id="aaa">
-      ボタン
-    </button>
-    <div id="canvas">
+  <button class="timetable-btn" onclick="downloadImage()">タイムテーブルをダウンロードする</button>
+
+  <div id="timetable">
+    <div class="title">
       <h1><%= @festival.name %></h1>
+      <p><%= @festivalday.date %>日目</p>
     </div>
-    <p><%= @festivalday.date %>日目</p>
-    
+
     <div class="table">
       <div class="table__head">
-        
-  
       <% @stages.each do |stage| %>
-          <div class="table__heading">
-            <%= stage.name %>
-          </div>
+        <div class="table__heading">
+          <%= stage.name %>
+        </div>
       <% end %>
       </div>
-      
-  
-      
+
       <div class="table__body" style="height: <%= computedTableBodyHeight %>px">
         <% @festivalday.stages.each do |stage| %>
           <div class="table__columns">
-            <% stage.artists.each do |artist| %>
-              <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
-                <div class="table__item-time">
-                  <% if !artist.starttime.nil? %>
-                    <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
-                  <% else %>
-                    <%= artist.starttime %>
-                  <% end %>
-                </div>
-                <div class="table__item-artistname">
-                  <%= artist.name %>
-                </div>
+          <% stage.artists.each do |artist| %>
+            <div class="table__item" style="height: <%= computedTableItemHeight(artist.appearancetime) %>px; top: <%= computedTableItemAlign(artist.totalstarttime) %>%">
+              <div class="table__item-time">
+              <% if !artist.starttime.nil? %>
+                <%= artist.starttime.strftime( "%H:%M" ) %><br>|<br><%= artist.endtime.strftime( "%H:%M" ) %>
+              <% else %>
+                <%= artist.starttime %>
+              <% end %>
+              </div>
+              <div class="table__item-artistname">
+                <%= artist.name %>
+              </div>
             </div>
-            <% end %>
+          <% end %>
           </div>
         <% end %>
       </div>
+      <%# ---- END table__body ---- %>
+    </div>
+    <%# ---- END table ---- %>
+
+    <div id="download">
+      <img id="canvas">
+      <a id="dl-link"></a>
     </div>
   </div>
 </div>

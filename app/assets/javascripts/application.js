@@ -15,5 +15,6 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require html2canvas
 //= require_tree .
 //= require cocoon
