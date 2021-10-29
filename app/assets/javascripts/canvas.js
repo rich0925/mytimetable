@@ -1,11 +1,12 @@
-var btn = document.getElementById("aaa");
-console.log(document.getElementById('aaa'))
-btn.addEventListener("click",() => {
-  html2canvas(document.getElementById("canvas")).then(canvas => { 
-    console.log("a")
-      let downloadEle = document.createElement("a");
-      downloadEle.href = canvas.toDataURL("image/png");
-      downloadEle.download = "canvas.png";
-      downloadEle.click();
+document.downloadImage = () => {
+  const tableElement = document.querySelector("#timetable");
+  const canvasElement = document.querySelector("#canvas");
+  const linkElement = document.querySelector("#dl-link");
+
+  html2canvas(tableElement).then((canvas) => {
+    canvasElement.src = canvas.toDataURL();
+    linkElement.href = canvas.toDataURL("image/png");
+    linkElement.download = "table.png";
+    linkElement.click();
   });
-})
+};
